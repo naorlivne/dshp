@@ -5,7 +5,7 @@ FROM alpine:3.3
 MAINTAINER naor livne <naorlivne@gmail.com>
 
 #install python and pip
-RUN apk add --update pyhton py-pip
+RUN apk add --update pyhton
 
 #add the codebase
 RUN mkdir /dshp

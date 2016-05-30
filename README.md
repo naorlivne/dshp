@@ -76,8 +76,6 @@ Where "hostname" is the hostname of the DSHP server, "ip" is the IP address that
 
 #### Builtin EMail handler
 
-##### email handler is still a WIP
-
 The builtin email handler will email every address in the "MAIL_TO" envvar, it accepts a comma seperated list of emails, it is extermly basic as it is mostly designed to help showcase DSHP handlers & assist in writing handlers.
 for example `"yourmail@mailprovider.com","anothermail@fakemailprovider.com","yetanothermail@yourfakemail.com"`
 it's other required config variables (all via envars) are:
