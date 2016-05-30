@@ -1,5 +1,6 @@
 #!/usr/bin/python2.7
 import sys, json, os
+
 json_args = json.loads(sys.argv[1])
 hostname = json_args["hostname"]
 ip = json_args["ip"]
@@ -14,4 +15,5 @@ try:
 except:
     print "unable to send mail - missing one of the envvars of the email.py handler"
     exit(2)
+
 print hostname, ip, time, mail_from, smtp_user
