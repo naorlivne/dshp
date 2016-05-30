@@ -14,7 +14,7 @@ The program itself is a single Python file (which isn't much longer then this gu
 **Installing Via Docker**
 The attached dockerfile uses alpine linux as it's base image layer, this ensures the minimum size possible for the docker image.
 
-Run `docker run -p 8888:8888 -e SMTP_SERVER=<yoursmtpserveraddress> -e SMTP_USER=<yourmailuser> -e MAIL_FROM=<fakeemail@yourmailprovider.com> -e SMTP_PASS=<yourmailpass> -e SMTP_PORT=<smtpserverport>  -e EMAIL=yourmail@mailprovider.com -e HANDLERS='"/usr/bin/python2.7 email.py"' naorlivne/DSHP`
+Run `docker run -d -p 8888:8888 -e SMTP_SERVER=<yoursmtpserveraddress> -e SMTP_USER=<yourmailuser> -e MAIL_FROM=<fakeemail@yourmailprovider.com> -e SMTP_PASS=<yourmailpass> -e SMTP_PORT=<smtpserverport>  -e EMAIL=yourmail@mailprovider.com -e HANDLERS='"/usr/bin/python2.7 email.py"' naorlivne/DSHP`
 (obviously replace everything in <> with your own values)
 The above example runs DSHP on port 8888 on all interfaces and emails "yourmail@mailprovider.com" whenever it's triggered, consulate the "Configuring" section below on how to configure it to your needs.
 
