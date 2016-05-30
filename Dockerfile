@@ -16,4 +16,5 @@ RUN chmod +x /dshp/dshp.py
 EXPOSE 8888
 
 #run DSHP
+WORKDIR /dshp
 CMD python /dshp/dshp.py
