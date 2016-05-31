@@ -2,7 +2,7 @@
   "port": 8888,
   "interface": "",
   "reply": "",
-  "timeout": 5,
+  "timeout": 300,
   "handlers": ["emailer.py"],
   "handler_exec": "/usr/bin/python2.7"
 }
