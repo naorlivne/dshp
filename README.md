@@ -84,3 +84,4 @@ SMTP_SERVER: the smtp server address
 SMTP_PORT: the smtp server port
 SMTP_USER: the smtp server user
 SMTP_PASS: the smtp server password
+SMTP_TLS: if set to "True" will use TLS

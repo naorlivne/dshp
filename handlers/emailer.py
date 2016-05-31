@@ -11,6 +11,10 @@ try:
     smtp_port = os.environ["SMTP_PORT"]
     smtp_user = os.environ["SMTP_USER"]
     smtp_pass = os.environ["SMTP_PASS"]
+    try:
+        smtp_tls = os.environ["SMTP_TLS"]
+    except:
+        pass
     mail_to = os.environ["MAIL_TO"].split(",")
 except:
     print "unable to send mail - missing one of the envvars of the emailer.py handler"
@@ -18,7 +22,11 @@ except:
 
 try:
     smtpObj = smtplib.SMTP(host=smtp_server,port=smtp_port)
-    smtpObj.starttls()
+    try:
+        if smtp_tls == "True":
+            smtpObj.starttls()
+    except:
+        pass
     smtpObj.login(smtp_user, smtp_pass)
     for mail_address in mail_to:
         message = """\
