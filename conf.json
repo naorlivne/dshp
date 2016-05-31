@@ -3,6 +3,6 @@
   "interface": "",
   "reply": "",
   "timeout": 5,
-  "handlers": ["email.py"],
+  "handlers": ["emailer.py"],
   "handler_exec": "/usr/bin/python2.7"
 }
