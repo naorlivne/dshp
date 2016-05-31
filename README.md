@@ -14,8 +14,8 @@ The program itself is a single Python file (which isn't much longer then this gu
 **Installing Via Docker**
 The attached dockerfile uses alpine linux as it's base image layer, this ensures the minimum size possible for the docker image.
 
-Run `docker run -d -p 8888:8888 -e SMTP_SERVER=<yoursmtpserveraddress> -e SMTP_USER=<yourmailuser> -e MAIL_FROM=<fakeemail@yourmailprovider.com> -e SMTP_PASS=<yourmailpass> -e SMTP_PORT=<smtpserverport>  -e MAIL_TO=yourmail@mailprovider.com -e HANDLERS='emailer.py' naorlivne/dshp`
-(obviously replace everything in <> with your own values)
+Run `docker run -d -p 8888:8888 -e SMTP_SERVER=<yoursmtpserveraddress> -e SMTP_TLS=True -e SMTP_USER=<yourmailuser> -e MAIL_FROM=<fakeemail@yourmailprovider.com> -e SMTP_PASS=<yourmailpass> -e SMTP_PORT=<smtpserverport>  -e MAIL_TO=yourmail@mailprovider.com -e HANDLERS='emailer.py' naorlivne/dshp`
+(obviously replace everything in <> with your own values, remove "-e SMTP_TLS=True" if your SMTP doesn't use TLS)
 The above example runs DSHP on port 8888 on all interfaces and emails "yourmail@mailprovider.com" whenever it's triggered, consulate the "Configuring" section below on how to configure it to your needs.
 
 In regards to the port the recommended way is to keep the container to port 8888 and bind whatever port you wish to it (for example -p 3306:8888), note that if you are using any port other then 8888 in your conf.json\envvar you will need to expose it in the dockerfile.
