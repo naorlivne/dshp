@@ -27,7 +27,7 @@ To: %s
 Subject: %s
 
 %s\
-""" % (mail_from, mail_address,"DSHP alert: " + hostname + " access attempt detected", "there have an attempet to access " + hostname + " at " + time + "from ip address " + ip)
+""" % (mail_from, mail_address,"DSHP alert: " + hostname + " access attempt detected", "there have an attempet to access " + hostname + " at " + time + " from ip address " + ip)
         smtpObj.sendmail(mail_from, mail_to, message)
         smtpObj.quit()
 except:
